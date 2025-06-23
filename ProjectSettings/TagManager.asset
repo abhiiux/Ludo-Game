@@ -47,5 +47,8 @@ TagManager:
   - name: Animation
     uniqueID: 140923009
     locked: 0
+  - name: Players
+    uniqueID: 3324806229
+    locked: 0
   m_RenderingLayers:
   - Default
