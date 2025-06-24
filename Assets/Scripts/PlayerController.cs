@@ -5,10 +5,9 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private List<TeamScript> players = new List<TeamScript>();
     [SerializeField] private DiceScript diceScript;
-    // [SerializeField] private bool isLog = false;
+    [SerializeField] private bool isLog = false;
 
-    // private List<Transform> tiles = new List<Transform>();
-    // private int totalTiles;
+
     private int currentPlayerIndex = 0;
 
     private void OnEnable()
@@ -20,16 +19,13 @@ public class PlayerController : MonoBehaviour
     {
         diceScript.DiceRoll -= HandleDiceRoll;
     }
-    // private void Start()
-    // {
-    //     tiles = TileManager.Instance.CommonTiles();
-    //     totalTiles = tiles.Count;
-    // }
 
     public void HandleDiceRoll(int value)
     {
         TeamScript team = players[currentPlayerIndex];
         team.HandleInput(value);
+        Log($" {currentPlayerIndex} team's is turn");
+        UIManager.Instance.ShowTurns(currentPlayerIndex);
 
         EndTurn(value);
     }
@@ -40,6 +36,12 @@ public class PlayerController : MonoBehaviour
             currentPlayerIndex = (currentPlayerIndex + 1) % players.Count;
         }
 
-        // UIManager.Instance.ShowTurns(currentPlayerIndex);
+    }
+    private void Log(string message)
+    {
+        if (isLog)
+        {
+            Debug.Log(message);
+        }
     }
 }

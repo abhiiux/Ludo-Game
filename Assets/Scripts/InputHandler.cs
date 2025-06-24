@@ -33,7 +33,7 @@ public class InputHandler : MonoBehaviour
 
         if (rayHit.collider != null)
         {
-            Debug.Log($" {rayHit.collider.gameObject.name}");
+            // Debug.Log($" {rayHit.collider.gameObject.name}");
 
             IClickable clickable = rayHit.collider.GetComponent<IClickable>();
             clickable.OnClickable();

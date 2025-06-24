@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,8 +8,9 @@ public class TeamScript : MonoBehaviour
 {
     public List<PlayerScript> pawns = new List<PlayerScript>();
     public List<PlayerScript> moveablePawns = new List<PlayerScript>();
+    public List<Transform> teamtile = new List<Transform>();
+
     public TeamClickable teamClickable;
-    public int freePawns = 0;
     public int moveDuration = 1;
     public int startPosition = 0;
     public int currentRollValue = 0;
@@ -25,7 +27,7 @@ public class TeamScript : MonoBehaviour
         tiles = TileManager.Instance.CommonTiles();
         totalTiles = tiles.Count;
     }
-
+#region InputHandling
     public void HandleInput(int rollValue)
     {
         currentRollValue = rollValue;
@@ -33,23 +35,78 @@ public class TeamScript : MonoBehaviour
 
         if (rollValue == 6)
         {
-            if (freePawns == 0)
+            HandleSixRoll();
+        }
+        else
+        {
+            HandleNormalRoll();
+        }
+    }
+    private void HandleSixRoll()
+    {
+        if (moveablePawns.Count == 0)
+        {
+            if (pawns.Count == 0)
             {
-                StartCoroutine(MovePlayer(pawns[0].transform, tiles[startPosition].position));
-                pawns[0].inJail = false;
+                Log("No pawns in jail to release.");
+                return;
             }
-            HandleSelection();
+
+            SpawnPawnFromJail(pawns[0]);
+        }
+        else
+        {
+            HandlePlayerSelection();
+            HandleTeamSelection();
+        }
+    }
+    private void PlayerOnField()
+    {
+
+        List<PlayerScript> toRemove = new List<PlayerScript>();
+        for (int i = 0; i < pawns.Count; i++)
+        {
+            if (!pawns[i].inJail)
+            {
+                moveablePawns.Add(pawns[i]);
+                toRemove.Add(pawns[i]);
+            }
+        }
+
+        Log($" roll value is {currentRollValue} & {moveablePawns.Count} movable pawn ");
+        foreach (var r in toRemove)
+        {
+            pawns.Remove(r);
         }
     }
 
-    private void HandleSelection()
+    private void HandleNormalRoll()
+    {
+        Log($" {currentRollValue} is the roll value, starting normal roll handling");
+        if (moveablePawns.Count > 1)
+        {
+            // HandleTeamSelection();
+            HandlePlayerSelection();
+        }
+        else if (moveablePawns.Count == 1)
+        {
+            MovePawn(moveablePawns[0]);
+        }
+        else
+        {
+            Log($"Roll value is {currentRollValue}, but no moveable pawns available.");
+            return;
+        }
+    }
+    #endregion
+    #region CallBack Handling
+    private void HandlePlayerSelection()
     {
         foreach (var players in moveablePawns)
         {
             players.EnableSelection((selectedPlayer) =>
             {
-                StartCoroutine(MovePlayer(selectedPlayer.transform, tiles[currentRollValue].position));
-                selectedPlayer.inJail = false;
+                MovePawn(selectedPlayer);
 
                 foreach (var p in moveablePawns)
                 {
@@ -57,19 +114,106 @@ public class TeamScript : MonoBehaviour
                 }
             });
         }
-        teamClickable.EnableSelection(() =>
-        {
-            if (pawns[0] == null) return;
-    
-            StartCoroutine(MovePlayer(pawns[0].transform, tiles[startPosition].position));
-            pawns[0].inJail = false;
-
-            teamClickable.DisableSelection();
-        });
     }
+    private void HandleTeamSelection()
+    {
+        if (moveablePawns.Count < 4 && currentRollValue == 6)
+        {
+            teamClickable.EnableSelection(() =>
+            {
+                if (pawns[0] == null) return;
+                SpawnPawnFromJail(pawns[0]);
+
+                teamClickable.DisableSelection();
+            });
+        }
+    }
+    #endregion
+
+    #region Moving
+    private void HandleTileSwitch(Enum team)
+    {
+        teamtile.Clear();
+
+        switch (team)
+        {
+            case Teams.Blue:
+                teamtile = TileManager.Instance.BlueTiles();
+                break;
+            case Teams.Red:
+                teamtile = TileManager.Instance.RedTiles();
+                break;
+            case Teams.Green:
+                teamtile = TileManager.Instance.GreenTiles();
+                break;
+            case Teams.Yellow:
+                teamtile = TileManager.Instance.YellowTiles();
+                break;
+        }
+    }
+    private void SpawnPawnFromJail(PlayerScript pawn)
+    {
+        StartCoroutine(MovePlayer(pawn.transform, tiles[startPosition].position));
+        pawn.inJail = false;
+        pawn.playerPosition = startPosition;
+        pawn.playerSteps = 0;
+    }
+
+    private void MovePawn(PlayerScript pawn)
+    {
+        int totalSteps = pawn.playerSteps + currentRollValue;
+
+        if (!pawn.inHomePath)
+        {
+            if (totalSteps < tiles.Count)
+            {
+                int newPos = (pawn.playerPosition + currentRollValue) % tiles.Count;
+                StartCoroutine(MovePlayer(pawn.transform, tiles[newPos].position));
+                pawn.playerPosition = newPos;
+                pawn.playerSteps = totalSteps;
+            }
+            else
+            {
+                HandleTileSwitch(pawn.teamType);
+                pawn.inHomePath = true;
+
+                int homeIndex = totalSteps - tiles.Count;
+                if (homeIndex < teamtile.Count)
+                {
+                    StartCoroutine(MovePlayer(pawn.transform, teamtile[homeIndex].position));
+                    pawn.playerPosition = homeIndex;
+                    pawn.playerSteps = totalSteps;
+
+                    if (homeIndex == teamtile.Count - 1)
+                        Log($"🎉 Huuurreeeeyyy!! {pawn.name} wins");
+                }
+                else
+                {
+                    Log($"{pawn.name} can't move — overshoots home path.");
+                }
+            }
+        }
+        else
+        {
+            int homeIndex = pawn.playerPosition + currentRollValue;
+            if (homeIndex < teamtile.Count)
+            {
+                StartCoroutine(MovePlayer(pawn.transform, teamtile[homeIndex].position));
+                pawn.playerPosition = homeIndex;
+                pawn.playerSteps = totalSteps;
+
+                if (homeIndex == teamtile.Count - 1)
+                    Log($"🎉 Huuurreeeeyyy!! {pawn.name} wins");
+            }
+            else
+            {
+                Log($"{pawn.name} can't move — overshoots home path.");
+            }
+        }
+    }
+
     private IEnumerator MovePlayer(Transform player, Vector3 targetPosition)
     {
-        Log($" rolled 6 and their is {freePawns} pawns are free");
         Vector3 start = player.position;
         float elapsed = 0f;
 
@@ -79,24 +223,22 @@ public class TeamScript : MonoBehaviour
             elapsed += Time.deltaTime;
             yield return null;
         }
-
         player.position = targetPosition;
 
-    }
-    private void PlayerOnField()
-    {
-        moveablePawns.Clear();
-        
-        for (int i = 0; i < pawns.Count; i++)
+        PlayerScript playerScript = player.GetComponent<PlayerScript>();
+        if (!playerScript.inHomePath)
         {
-            if (!pawns[i].inJail)
+            List<Transform> tile = TileManager.Instance.CommonTiles();
+            TileScript landedTile = tile[playerScript.playerPosition].GetComponent<TileScript>();
+
+            if (tile != null)
             {
-                freePawns++;
-                moveablePawns.Add(pawns[i]);
-                pawns.RemoveAt(i);
+                landedTile.OnPlayerLands(playerScript);
             }
         }
-    }
+    }   
+    #endregion
+
     private void Log(string message)
     {
         if (isLog)

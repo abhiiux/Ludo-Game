@@ -1,0 +1,78 @@
+using System.Collections.Generic;
+using UnityEngine;
+
+public class TileScript : MonoBehaviour
+{
+    public bool isLog;
+    public List<PlayerScript> allpawns = new List<PlayerScript>();
+    public enum TileType
+    {
+        Normal,
+        FinishLine,
+        SafeZone
+    }
+    public TileType tileType;
+
+    public void OnPlayerLands(PlayerScript arrivingPlayer)
+    {
+        Log($"{arrivingPlayer.name} of {arrivingPlayer.teamType} arrived on {this.name}");
+        
+        switch (tileType)
+        {
+            case TileType.Normal:
+                HandlePawnCancel(arrivingPlayer);
+                break;
+            case TileType.SafeZone:
+                HandleSafeZone(arrivingPlayer);
+                break;
+            case TileType.FinishLine:
+                Log($" Huureeeyy! {arrivingPlayer.name} has just finished! ");
+                break;
+        }
+    }
+
+    private void HandlePawnCancel(PlayerScript arrivingPlayer)
+    {
+        Log($" ready to cancel on {this.name}");
+        allpawns.Add(arrivingPlayer);
+        List<PlayerScript> toCancel = new List<PlayerScript>();
+        foreach (var otherPawn in allpawns)
+        {
+            if (otherPawn == arrivingPlayer) continue;
+            if (otherPawn.teamType == arrivingPlayer.teamType) continue;
+            if (otherPawn.playerPosition == arrivingPlayer.playerPosition)
+            {
+                toCancel.Add(otherPawn);
+            }
+        }
+
+        if (toCancel.Count > 0)
+        {
+            foreach (var item in toCancel)
+            {
+                CancelPawn(item);
+            }
+        }
+    }
+    private void HandleSafeZone(PlayerScript player)
+    {
+        Log($" Reached safe zone");
+    }
+    private void CancelPawn(PlayerScript pawn)
+    {
+        pawn.inJail = true;
+        pawn.playerPosition = -1;
+        pawn.transform.position = pawn.startPoint.position;
+        allpawns.Remove(pawn);
+
+        Debug.Log($"{pawn.name} was cancelled!");
+    }
+
+    private void Log(string message)
+    {
+        if (isLog)
+        {
+            Debug.Log(message);
+        }
+    }
+}

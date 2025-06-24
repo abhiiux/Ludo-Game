@@ -10,12 +10,14 @@ public class TeamClickable : MonoBehaviour, IClickable
     {
         isSelectable = true;
         onSelected = callback;
+        UIManager.Instance.RollButton(0);
     }
 
     public void DisableSelection()
     {
         isSelectable = false;
         onSelected = null;
+        UIManager.Instance.RollButton(1);
     }
 
     public void OnClickable()

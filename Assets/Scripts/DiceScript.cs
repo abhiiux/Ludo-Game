@@ -36,7 +36,10 @@ public class DiceScript : MonoBehaviour
 
         diceAnimation.SetActive(false);
 
-        // rollValue = UnityEngine.Random.Range(1, 7);
+        if (!isLog)
+        {
+            rollValue = UnityEngine.Random.Range(1, 7);
+        }
         Log($"dice rolled :{rollValue}");
         ShowDice(rollValue - 1);
         DiceRoll?.Invoke(rollValue);
