@@ -1,7 +1,7 @@
 # 🎲 Ludo Game (Unity 2D)  
 **A assignment submission by [Abhidev Ramesh]** | **[https://abhidevramesh.framer.website/]**  
 
-![Gameplay GIF](Screenshots/gameplay.gif) *(Crucial! Show your work visually.)*  
+![Gameplay GIF](Screenshots/gameplay.gif)   
 
 ## 🏆 **Key Highlights** *  
 - **Architecture**: Implemented turn management and movement logic using **modular C# scripts**  
