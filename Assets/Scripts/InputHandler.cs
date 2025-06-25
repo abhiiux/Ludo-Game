@@ -3,10 +3,23 @@ using UnityEngine.InputSystem;
 
 public class InputHandler : MonoBehaviour
 {
+    public static InputHandler Instance;
     [SerializeField] private Camera mainCamera;
     [SerializeField] private InputAction mouseClick;
     [SerializeField] private InputAction mousePosition;
-    
+
+    private LayerMask currentLayer;
+    private void Awake()
+    {
+
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+
+    }
     private void OnEnable()
     {
         mouseClick.started += OnClick;
@@ -20,20 +33,23 @@ public class InputHandler : MonoBehaviour
         mouseClick.Disable();
         mousePosition.Disable();
     }
-
-    /// <summary>
-    /// Called when the mouse is clicked. Detects clicked tile.
-    /// </summary>
+    public void SetLayer(int layerNumber)
+    {
+        string layerName = LayerMask.LayerToName(layerNumber);
+        currentLayer = LayerMask.GetMask(layerName);
+        Debug.Log($"current layer assigned is {layerName}");
+    }
     public void OnClick(InputAction.CallbackContext context)
     {
         if (!context.started) return;
 
         Vector2 screenPos = mousePosition.ReadValue<Vector2>();
-        var rayHit = Physics2D.GetRayIntersection(mainCamera.ScreenPointToRay(screenPos));
+        Ray ray = mainCamera.ScreenPointToRay(screenPos);
+        var rayHit = Physics2D.GetRayIntersection(ray,Mathf.Infinity,currentLayer);
 
         if (rayHit.collider != null)
         {
-            // Debug.Log($" {rayHit.collider.gameObject.name}");
+            Debug.Log($" {rayHit.collider.gameObject.name}");
 
             IClickable clickable = rayHit.collider.GetComponent<IClickable>();
             clickable.OnClickable();

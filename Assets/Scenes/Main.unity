@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &32287235
@@ -198,9 +198,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 536977922}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -229, y: 349}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -279, y: 349}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &32287237
@@ -285,7 +285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &51227198
@@ -332,7 +332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &63638398
@@ -379,7 +379,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &72319725
@@ -607,7 +607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &109327552
@@ -747,7 +747,7 @@ GameObject:
   - component: {fileID: 145571482}
   - component: {fileID: 145571481}
   - component: {fileID: 145571480}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -901,7 +901,7 @@ GameObject:
   - component: {fileID: 150015722}
   - component: {fileID: 150015721}
   - component: {fileID: 150015723}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1049,7 +1049,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &172381930
@@ -1096,7 +1096,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &173216087
@@ -1143,7 +1143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &183698121
@@ -1227,7 +1227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 2
 --- !u!1 &226611137
@@ -1352,7 +1352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &279664674
@@ -1446,7 +1446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &302488387
@@ -1461,7 +1461,7 @@ GameObject:
   - component: {fileID: 302488390}
   - component: {fileID: 302488389}
   - component: {fileID: 302488391}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1609,7 +1609,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &364025651
@@ -1656,7 +1656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &382860201
@@ -1801,9 +1801,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 536977922}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 232, y: 352}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 282, y: 352}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &432882018
@@ -2174,7 +2174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   diceAnimation: {fileID: 382860201}
   diceObjects: {fileID: 459908190}
-  isLog: 1
+  isLog: 0
   rollValue: 6
 --- !u!1 &492143226
 GameObject:
@@ -2356,7 +2356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &516198925
@@ -2371,7 +2371,7 @@ GameObject:
   - component: {fileID: 516198929}
   - component: {fileID: 516198928}
   - component: {fileID: 516198927}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2780,7 +2780,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &580969237
@@ -3091,7 +3091,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3221,7 +3221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &690002509
@@ -3236,7 +3236,7 @@ GameObject:
   - component: {fileID: 690002512}
   - component: {fileID: 690002510}
   - component: {fileID: 690002511}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Yellow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3385,7 +3385,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.33817253, y: -0.26024386, z: 0.008245609}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1982359477}
   - {fileID: 1361654285}
@@ -3442,7 +3442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &737915154
@@ -3489,7 +3489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 2
 --- !u!1 &764533343
@@ -3536,7 +3536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &766106127
@@ -3583,7 +3583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 2
 --- !u!1 &798035374
@@ -3630,7 +3630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &806883219
@@ -3724,7 +3724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &824971437
@@ -3776,7 +3776,7 @@ GameObject:
   - component: {fileID: 842655941}
   - component: {fileID: 842655940}
   - component: {fileID: 842655939}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3930,7 +3930,7 @@ GameObject:
   - component: {fileID: 843288952}
   - component: {fileID: 843288951}
   - component: {fileID: 843288950}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4116,7 +4116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &855062095
@@ -4163,7 +4163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &857441489
@@ -4178,7 +4178,7 @@ GameObject:
   - component: {fileID: 857441493}
   - component: {fileID: 857441492}
   - component: {fileID: 857441491}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4441,7 +4441,7 @@ GameObject:
   - component: {fileID: 923782466}
   - component: {fileID: 923782465}
   - component: {fileID: 923782464}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4744,7 +4744,7 @@ GameObject:
   - component: {fileID: 1006063748}
   - component: {fileID: 1006063747}
   - component: {fileID: 1006063746}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5034,7 +5034,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &1018337642
@@ -5112,7 +5112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &1054708627
@@ -5159,7 +5159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &1064551626
@@ -5206,7 +5206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &1095812363
@@ -5340,7 +5340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &1112107428
@@ -5387,7 +5387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &1134807433
@@ -5434,7 +5434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &1150275579
@@ -5466,7 +5466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f731fd96442749a98b05aed06bcab51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  players:
+  teams:
   - {fileID: 302488389}
   - {fileID: 150015721}
   - {fileID: 1466686167}
@@ -5484,7 +5484,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.1978167, y: -1.0218371, z: 0.07432937}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 302488388}
   - {fileID: 150015720}
@@ -5536,7 +5536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &1160296977
@@ -5687,7 +5687,7 @@ GameObject:
   - component: {fileID: 1184477854}
   - component: {fileID: 1184477853}
   - component: {fileID: 1184477852}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5861,9 +5861,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 536977922}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 237, y: -364}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 287, y: -364}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1184886111
@@ -5985,9 +5985,9 @@ RectTransform:
   - {fileID: 1160296978}
   m_Father: {fileID: 1012167755}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -525}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 115}
   m_SizeDelta: {x: 160, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1232909867
@@ -6128,7 +6128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 2
 --- !u!1 &1278540912
@@ -6175,7 +6175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &1295133038
@@ -6190,7 +6190,7 @@ GameObject:
   - component: {fileID: 1295133042}
   - component: {fileID: 1295133041}
   - component: {fileID: 1295133040}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6576,7 +6576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &1361654284
@@ -6659,7 +6659,7 @@ GameObject:
   - component: {fileID: 1437819568}
   - component: {fileID: 1437819567}
   - component: {fileID: 1437819566}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6845,7 +6845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 2
 --- !u!1 &1466686166
@@ -6860,7 +6860,7 @@ GameObject:
   - component: {fileID: 1466686169}
   - component: {fileID: 1466686167}
   - component: {fileID: 1466686168}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Green
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7055,7 +7055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &1491805634
@@ -7267,7 +7267,7 @@ GameObject:
   - component: {fileID: 1541443918}
   - component: {fileID: 1541443917}
   - component: {fileID: 1541443916}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7453,7 +7453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &1573882034
@@ -7500,7 +7500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &1575716502
@@ -7535,9 +7535,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 536977922}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -234, y: -357}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -284, y: -357}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1575716504
@@ -7622,7 +7622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 2
 --- !u!1 &1644573577
@@ -7763,7 +7763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &1694259247
@@ -7810,7 +7810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &1695315024
@@ -7884,9 +7884,9 @@ RectTransform:
   - {fileID: 492143227}
   m_Father: {fileID: 1012167755}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -525}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 115}
   m_SizeDelta: {x: 160, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1703389587
@@ -8011,7 +8011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &1744765876
@@ -8026,7 +8026,7 @@ GameObject:
   - component: {fileID: 1744765880}
   - component: {fileID: 1744765879}
   - component: {fileID: 1744765878}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8180,7 +8180,7 @@ GameObject:
   - component: {fileID: 1750872770}
   - component: {fileID: 1750872769}
   - component: {fileID: 1750872768}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8366,7 +8366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &1829811347
@@ -8381,7 +8381,7 @@ GameObject:
   - component: {fileID: 1829811351}
   - component: {fileID: 1829811350}
   - component: {fileID: 1829811349}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8535,7 +8535,7 @@ GameObject:
   - component: {fileID: 1830533116}
   - component: {fileID: 1830533115}
   - component: {fileID: 1830533114}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8721,7 +8721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &1836737122
@@ -8768,7 +8768,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 2
 --- !u!1 &1838269706
@@ -8893,7 +8893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 2
 --- !u!1 &1946436276
@@ -8940,7 +8940,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &1958801745
@@ -8987,7 +8987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &1967844341
@@ -9034,7 +9034,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &1976750734
@@ -9081,7 +9081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &1982359476
@@ -9179,7 +9179,7 @@ GameObject:
   - component: {fileID: 2004402289}
   - component: {fileID: 2004402288}
   - component: {fileID: 2004402287}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9675,7 +9675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378e0ca5a06c7410eaeb36e100f8fbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLog: 1
+  isLog: 0
   allpawns: []
   tileType: 0
 --- !u!1 &2135675703
@@ -9732,9 +9732,9 @@ SceneRoots:
   - {fileID: 1514572655}
   - {fileID: 619394802}
   - {fileID: 519420032}
-  - {fileID: 655317379}
   - {fileID: 1012167755}
   - {fileID: 483336692}
+  - {fileID: 655317379}
   - {fileID: 705512132}
-  - {fileID: 466059905}
   - {fileID: 1150275581}
+  - {fileID: 466059905}

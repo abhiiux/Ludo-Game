@@ -185,7 +185,7 @@ public class TeamScript : MonoBehaviour
                     pawn.playerSteps = totalSteps;
 
                     if (homeIndex == teamtile.Count - 1)
-                        Log($"🎉 Huuurreeeeyyy!! {pawn.name} wins");
+                    WinScenario(pawn.name);
                 }
                 else
                 {
@@ -203,7 +203,7 @@ public class TeamScript : MonoBehaviour
                 pawn.playerSteps = totalSteps;
 
                 if (homeIndex == teamtile.Count - 1)
-                    Log($"🎉 Huuurreeeeyyy!! {pawn.name} wins");
+                    WinScenario(pawn.name);
             }
             else
             {
@@ -236,9 +236,14 @@ public class TeamScript : MonoBehaviour
                 landedTile.OnPlayerLands(playerScript);
             }
         }
-    }   
+    }
     #endregion
-
+    private void WinScenario(string pawnName)
+    {
+        Debug.Log($"🎉 Huuurreeeeyyy!! {pawnName} wins");
+        PlayerController playerController = this.GetComponentInParent<PlayerController>();
+        playerController.GiveChance();
+    }
     private void Log(string message)
     {
         if (isLog)

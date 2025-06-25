@@ -10,6 +10,8 @@ public enum Teams
 }
 public class PlayerScript : MonoBehaviour, IClickable
 {
+    // public InputHandler inputHandler;
+    // public LayerMask layerMask;
     public bool inJail = true;
     public bool inHomePath = false;
     public int playerId;

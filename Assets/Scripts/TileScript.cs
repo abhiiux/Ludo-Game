@@ -8,7 +8,6 @@ public class TileScript : MonoBehaviour
     public enum TileType
     {
         Normal,
-        FinishLine,
         SafeZone
     }
     public TileType tileType;
@@ -24,9 +23,6 @@ public class TileScript : MonoBehaviour
                 break;
             case TileType.SafeZone:
                 HandleSafeZone(arrivingPlayer);
-                break;
-            case TileType.FinishLine:
-                Log($" Huureeeyy! {arrivingPlayer.name} has just finished! ");
                 break;
         }
     }
@@ -65,7 +61,12 @@ public class TileScript : MonoBehaviour
         pawn.transform.position = pawn.startPoint.position;
         allpawns.Remove(pawn);
 
-        Debug.Log($"{pawn.name} was cancelled!");
+        TeamScript team = pawn.GetComponentInParent<TeamScript>();
+        team.moveablePawns.Remove(pawn);
+
+        PlayerController playerController = team.GetComponentInParent<PlayerController>();
+        playerController.GiveChance();
+        Log($"{pawn.name} was cancelled!");
     }
 
     private void Log(string message)

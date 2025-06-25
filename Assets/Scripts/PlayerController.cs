@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private List<TeamScript> players = new List<TeamScript>();
+    [SerializeField] private List<TeamScript> teams = new List<TeamScript>();
     [SerializeField] private DiceScript diceScript;
     [SerializeField] private bool isLog = false;
 
@@ -22,18 +22,22 @@ public class PlayerController : MonoBehaviour
 
     public void HandleDiceRoll(int value)
     {
-        TeamScript team = players[currentPlayerIndex];
+        TeamScript team = teams[currentPlayerIndex];
         team.HandleInput(value);
         Log($" {currentPlayerIndex} team's is turn");
         UIManager.Instance.ShowTurns(currentPlayerIndex);
 
         EndTurn(value);
     }
+    public void GiveChance()
+    {
+        currentPlayerIndex -= 1;
+    }
     private void EndTurn(int rollValue)
     {
         if (rollValue != 6)
         {
-            currentPlayerIndex = (currentPlayerIndex + 1) % players.Count;
+            currentPlayerIndex = (currentPlayerIndex + 1) % teams.Count;
         }
 
     }
