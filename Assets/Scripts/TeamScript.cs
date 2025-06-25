@@ -6,21 +6,22 @@ using UnityEngine;
 
 public class TeamScript : MonoBehaviour
 {
-    public List<PlayerScript> pawns = new List<PlayerScript>();
     public List<PlayerScript> moveablePawns = new List<PlayerScript>();
-    public List<Transform> teamtile = new List<Transform>();
+    [SerializeField] private bool isLog;
+    [SerializeField] private List<PlayerScript> pawns = new List<PlayerScript>();
+    [SerializeField] private List<Transform> teamtile = new List<Transform>();
 
-    public TeamClickable teamClickable;
-    public int moveDuration = 1;
+    private TeamClickable teamClickable;
+    private int moveDuration = 1;
     public int startPosition = 0;
-    public int currentRollValue = 0;
-    public bool isLog;
-
+    private int currentRollValue = 0;
     private List<Transform> tiles = new List<Transform>();
     private int totalTiles;
+
     void Awake()
     {
         pawns = GetComponentsInChildren<PlayerScript>().ToList();
+        teamClickable = GetComponent<TeamClickable>();
     }
     void Start()
     {
@@ -85,7 +86,6 @@ public class TeamScript : MonoBehaviour
         Log($" {currentRollValue} is the roll value, starting normal roll handling");
         if (moveablePawns.Count > 1)
         {
-            // HandleTeamSelection();
             HandlePlayerSelection();
         }
         else if (moveablePawns.Count == 1)
@@ -240,7 +240,7 @@ public class TeamScript : MonoBehaviour
     #endregion
     private void WinScenario(string pawnName)
     {
-        Debug.Log($"🎉 Huuurreeeeyyy!! {pawnName} wins");
+        UIManager.Instance.StartDancing();
         PlayerController playerController = this.GetComponentInParent<PlayerController>();
         playerController.GiveChance();
     }

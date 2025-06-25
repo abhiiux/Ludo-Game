@@ -9,8 +9,8 @@ public class DiceScript : MonoBehaviour
     [SerializeField] bool isLog;
     [SerializeField] int rollValue;
 
-    int lastValue;
-    SpriteRenderer[] diceSprites;
+    private int lastValue;
+    private SpriteRenderer[] diceSprites;
     public Action<int> DiceRoll;
 
     void Start()

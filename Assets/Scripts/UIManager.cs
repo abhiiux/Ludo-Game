@@ -1,15 +1,17 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
-
     [SerializeField] GameObject turnUI;
     [SerializeField] GameObject rollButton;
     [SerializeField] GameObject waitUI;
 
-    public Image[] turnIndicators;
+    private Image[] turnIndicators;
+    private SpriteRenderer danceSprite;
+    private Animator animator;
 
     void Awake()
     {
@@ -24,6 +26,10 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         turnIndicators = turnUI.GetComponentsInChildren<Image>();
+        animator = GetComponent<Animator>();
+        danceSprite = GetComponent<SpriteRenderer>();
+        
+        danceSprite.enabled = false;
     }
 
     public void ShowTurns(int index)
@@ -37,5 +43,19 @@ public class UIManager : MonoBehaviour
     {
         bool r = value > 0 ? true : false;
         rollButton.SetActive(r);
+    }
+    public void StartDancing()
+    {
+        StartCoroutine(Dance());
+    }
+    private IEnumerator Dance()
+    {
+        danceSprite.enabled = true;
+        animator.SetBool("isDancing", true);
+
+        yield return new WaitForSeconds(2f);
+
+        animator.SetBool("isDancing", false);
+        danceSprite.enabled = false;
     }
 }

@@ -7,7 +7,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private DiceScript diceScript;
     [SerializeField] private bool isLog = false;
 
-
     private int currentPlayerIndex = 0;
 
     private void OnEnable()

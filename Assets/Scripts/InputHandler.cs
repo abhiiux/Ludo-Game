@@ -37,7 +37,6 @@ public class InputHandler : MonoBehaviour
     {
         string layerName = LayerMask.LayerToName(layerNumber);
         currentLayer = LayerMask.GetMask(layerName);
-        Debug.Log($"current layer assigned is {layerName}");
     }
     public void OnClick(InputAction.CallbackContext context)
     {
@@ -49,9 +48,9 @@ public class InputHandler : MonoBehaviour
 
         if (rayHit.collider != null)
         {
-            Debug.Log($" {rayHit.collider.gameObject.name}");
-
             IClickable clickable = rayHit.collider.GetComponent<IClickable>();
+
+            if (clickable == null) return;
             clickable.OnClickable();
         }
     }

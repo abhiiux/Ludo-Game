@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class TileScript : MonoBehaviour
 {
-    public bool isLog;
-    public List<PlayerScript> allpawns = new List<PlayerScript>();
+    [SerializeField] private bool isLog;
+    private List<PlayerScript> allpawns = new List<PlayerScript>();
     public enum TileType
     {
         Normal,

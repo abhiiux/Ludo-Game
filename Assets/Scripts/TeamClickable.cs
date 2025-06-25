@@ -10,7 +10,6 @@ public class TeamClickable : MonoBehaviour, IClickable
     {
         isSelectable = true;
         onSelected = callback;
-        // Debug.Log($"{gameObject.layer} is turned on");
         InputHandler.Instance.SetLayer(gameObject.layer);
         UIManager.Instance.RollButton(0);
     }
@@ -26,7 +25,6 @@ public class TeamClickable : MonoBehaviour, IClickable
     {
         if (!isSelectable) return;
 
-        Debug.Log($" Clicked on team");
         onSelected?.Invoke();
         DisableSelection();
     }
