@@ -9,7 +9,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject rollButton;
     [SerializeField] GameObject waitUI;
 
-    private Image[] turnIndicators;
+    private SpriteRenderer[] turnIndicators;
     private SpriteRenderer danceSprite;
     private Animator animator;
 
@@ -25,10 +25,10 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
-        turnIndicators = turnUI.GetComponentsInChildren<Image>();
+        turnIndicators = turnUI.GetComponentsInChildren<SpriteRenderer>();
         animator = GetComponent<Animator>();
         danceSprite = GetComponent<SpriteRenderer>();
-        
+
         danceSprite.enabled = false;
     }
 
@@ -53,7 +53,7 @@ public class UIManager : MonoBehaviour
         danceSprite.enabled = true;
         animator.SetBool("isDancing", true);
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(5f);
 
         animator.SetBool("isDancing", false);
         danceSprite.enabled = false;
