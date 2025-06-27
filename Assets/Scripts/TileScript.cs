@@ -49,10 +49,15 @@ public class TileScript : MonoBehaviour
                 CancelPawn(item);
             }
         }
+        else
+        {
+          UIManager.Instance.ShowTurns(); 
+        }
     }
     private void HandleSafeZone(PlayerScript player)
     {
         Log($" Reached safe zone");
+        UIManager.Instance.ShowTurns();
     }
     private void CancelPawn(PlayerScript pawn)
     {
@@ -63,9 +68,10 @@ public class TileScript : MonoBehaviour
 
         TeamScript team = pawn.GetComponentInParent<TeamScript>();
         team.moveablePawns.Remove(pawn);
-
-        PlayerController playerController = team.GetComponentInParent<PlayerController>();
+        team.pawns.Add(pawn);
+        PlayerController playerController = pawn.GetComponentInParent<PlayerController>();
         playerController.GiveChance();
+        // UIManager.Instance.GiveChance();
         Log($"{pawn.name} was cancelled!");
     }
 

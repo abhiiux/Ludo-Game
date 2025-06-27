@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
     private SpriteRenderer[] turnIndicators;
     private SpriteRenderer danceSprite;
     private Animator animator;
+    private int nextTeam;
 
     void Awake()
     {
@@ -31,12 +32,23 @@ public class UIManager : MonoBehaviour
 
         danceSprite.enabled = false;
     }
-
-    public void ShowTurns(int index)
+    public void SaveNextTurn(int value)
     {
+        nextTeam = value;
+        Debug.Log($" next turn saved for {nextTeam} ");
+    }
+    public void GiveChance()
+    {
+        nextTeam -= 1;
+        Debug.Log($" giving a chance || next turn is for {nextTeam}");
+        ShowTurns();
+    }
+    public void ShowTurns()
+    {
+        Debug.Log($" showing turns || turn is for {nextTeam} ");
         for (int i = 0; i < turnIndicators.Length; i++)
         {
-            turnIndicators[i].enabled = (i == index);
+            turnIndicators[i].enabled = (i == nextTeam);
         }
     }
     public void RollButton(int value)

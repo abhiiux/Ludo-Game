@@ -942,9 +942,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae76f659b98a24ad288e43bd49f2fe15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pawns: []
   moveablePawns: []
   isLog: 0
-  pawns: []
   teamtile: []
   startPosition: 13
 --- !u!61 &150015722
@@ -1491,9 +1491,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae76f659b98a24ad288e43bd49f2fe15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pawns: []
   moveablePawns: []
   isLog: 0
-  pawns: []
   teamtile: []
   startPosition: 0
 --- !u!61 &302488390
@@ -3316,9 +3316,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae76f659b98a24ad288e43bd49f2fe15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pawns: []
   moveablePawns: []
   isLog: 0
-  pawns: []
   teamtile: []
   startPosition: 39
 --- !u!114 &690002511
@@ -5506,11 +5506,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f731fd96442749a98b05aed06bcab51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teams:
-  - {fileID: 302488389}
-  - {fileID: 150015721}
-  - {fileID: 1466686167}
-  - {fileID: 690002510}
+  allActiveTeams:
+  - {fileID: 302488387}
+  - {fileID: 1466686166}
+  - {fileID: 150015719}
+  - {fileID: 690002509}
   diceScript: {fileID: 483336693}
   isLog: 0
 --- !u!4 &1150275581
@@ -6925,9 +6925,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae76f659b98a24ad288e43bd49f2fe15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pawns: []
   moveablePawns: []
   isLog: 0
-  pawns: []
   teamtile: []
   startPosition: 26
 --- !u!114 &1466686168

@@ -6,9 +6,9 @@ using UnityEngine;
 
 public class TeamScript : MonoBehaviour
 {
-    public List<PlayerScript> moveablePawns = new List<PlayerScript>();
+    public List<PlayerScript> pawns = new List<PlayerScript>();
+    [HideInInspector] public List<PlayerScript> moveablePawns = new List<PlayerScript>();
     [SerializeField] private bool isLog;
-    [SerializeField] private List<PlayerScript> pawns = new List<PlayerScript>();
     [SerializeField] private List<Transform> teamtile = new List<Transform>();
 
     private TeamClickable teamClickable;
@@ -84,18 +84,20 @@ public class TeamScript : MonoBehaviour
     private void HandleNormalRoll()
     {
         Log($" {currentRollValue} is the roll value, starting normal roll handling");
-        if (moveablePawns.Count > 1)
+
+        if (moveablePawns.Count == 0)
         {
-            HandlePlayerSelection();
+            Log($"Roll value is {currentRollValue}, but no moveable pawns available.");
+            UIManager.Instance.ShowTurns();
+            return;
         }
         else if (moveablePawns.Count == 1)
         {
             MovePawn(moveablePawns[0]);
         }
-        else
+        else if (moveablePawns.Count > 1)
         {
-            Log($"Roll value is {currentRollValue}, but no moveable pawns available.");
-            return;
+            HandlePlayerSelection();
         }
     }
     #endregion
@@ -185,7 +187,7 @@ public class TeamScript : MonoBehaviour
                     pawn.playerSteps = totalSteps;
 
                     if (homeIndex == teamtile.Count - 1)
-                    WinScenario(pawn.name);
+                    WinScenario(pawn);
                 }
                 else
                 {
@@ -203,7 +205,7 @@ public class TeamScript : MonoBehaviour
                 pawn.playerSteps = totalSteps;
 
                 if (homeIndex == teamtile.Count - 1)
-                    WinScenario(pawn.name);
+                    WinScenario(pawn);
             }
             else
             {
@@ -238,9 +240,11 @@ public class TeamScript : MonoBehaviour
         }
     }
     #endregion
-    private void WinScenario(string pawnName)
+    private void WinScenario(PlayerScript winner)
     {
         UIManager.Instance.StartDancing();
+
+        moveablePawns.Remove(winner);
         PlayerController playerController = this.GetComponentInParent<PlayerController>();
         playerController.GiveChance();
     }
