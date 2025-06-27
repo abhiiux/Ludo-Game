@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: 2Players
   m_EditorClassIdentifier: 
   teamSetup:
-  - TeamObj: {fileID: 0}
-    TeamUi: {fileID: 0}
+  - TeamObj: {fileID: 4377860346366494433, guid: 00be99b9b360e413ba44c5f40ed29cea, type: 3}
+    TeamUi: {fileID: 6627698175428116254, guid: 37b9f86775dac414ebce9887d3dcff50, type: 3}
+  - TeamObj: {fileID: 4377860346366494433, guid: 00be99b9b360e413ba44c5f40ed29cea, type: 3}
+    TeamUi: {fileID: 6627698175428116254, guid: 37b9f86775dac414ebce9887d3dcff50, type: 3}
