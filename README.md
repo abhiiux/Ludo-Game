@@ -1,5 +1,5 @@
 # 🎲 Ludo Game (Unity 2D)  
-**A assignment submission by [Abhidev Ramesh]** | **[https://abhidevramesh.framer.website/]**  
+**A Classic Ludo Game by [Abhidev Ramesh]** | **[https://abhidevramesh.framer.website/]**  
 
 [Screenshots]  
 <img width="367" alt="Screenshot 2025-06-25 at 4 43 05 PM" src="https://github.com/user-attachments/assets/6ccabfcd-1b04-4c49-ae7e-89fbe60e777e" />
