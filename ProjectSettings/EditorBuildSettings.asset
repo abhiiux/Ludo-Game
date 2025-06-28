@@ -6,7 +6,16 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Main.unity
+    path: Assets/Scenes/First.unity
+    guid: c83b7e18ed9c9479da7bbf9b71db0dcf
+  - enabled: 1
+    path: Assets/Scenes/Three Player.unity
+    guid: 97e05af42280f4ede83d807e17b26277
+  - enabled: 1
+    path: Assets/Scenes/Two Player.unity
+    guid: 1ca6702187591483b88f6e2e6f5304f5
+  - enabled: 1
+    path: Assets/Scenes/Four Player.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

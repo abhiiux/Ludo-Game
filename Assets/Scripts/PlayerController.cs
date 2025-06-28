@@ -8,7 +8,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool isLog = false;
 
     private List<TeamScript> teams = new List<TeamScript>();
-    private List<GameObject> selectedTeams = new List<GameObject>();
     private int currentPlayerIndex = 0;
     private int playerCount = 0;
 
@@ -23,7 +22,6 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         teams.Clear();
-        selectedTeams.Clear();
 
         for (int i = 0; i < allActiveTeams.Length; i++)
         {
@@ -31,7 +29,6 @@ public class PlayerController : MonoBehaviour
             {
                 GameObject teamGO = allActiveTeams[i];
                 teamGO.SetActive(true);
-                selectedTeams.Add(teamGO);
 
                 TeamScript teamScript = teamGO.GetComponent<TeamScript>();
                 if (teamScript != null)
@@ -40,7 +37,7 @@ public class PlayerController : MonoBehaviour
                 }
                 else if (isLog)
                 {
-                    Debug.LogWarning($"No TeamScript found on {teamGO.name}");
+                    Log($"No TeamScript found on {teamGO.name}");
                 }
             }
             else
