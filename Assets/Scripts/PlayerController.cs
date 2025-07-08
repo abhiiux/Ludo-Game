@@ -54,10 +54,9 @@ public class PlayerController : MonoBehaviour
     public void HandleDiceRoll(int value)
     {
         TeamScript team = teams[currentPlayerIndex];
+        Log($" {currentPlayerIndex} team's is turn");
         EndTurn(value);
         team.HandleInput(value);
-        // Log($" {currentPlayerIndex} team's is turn");
-
     }
     public void GiveChance()
     {

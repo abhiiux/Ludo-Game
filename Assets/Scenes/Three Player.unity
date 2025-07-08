@@ -1423,6 +1423,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4770839914189852049, guid: d054f1980980e42e18e7759f66ba729b, type: 3}
   m_PrefabInstance: {fileID: 409007080}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &409007082 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7271180825979390952, guid: d054f1980980e42e18e7759f66ba729b, type: 3}
+  m_PrefabInstance: {fileID: 409007080}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &448427224
 GameObject:
   m_ObjectHideFlags: 0
@@ -1622,7 +1627,6 @@ GameObject:
   - component: {fileID: 466059906}
   - component: {fileID: 466059908}
   - component: {fileID: 466059907}
-  - component: {fileID: 466059909}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1645,6 +1649,7 @@ MonoBehaviour:
   turnUI: {fileID: 1808071142}
   rollButton: {fileID: 1232909865}
   waitUI: {fileID: 1695315024}
+  isLog: 0
 --- !u!4 &466059905
 Transform:
   m_ObjectHideFlags: 0
@@ -1801,22 +1806,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &466059909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 466059903}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef5a7fb1e90a84a8596d666ea9e98ea3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  teamRef:
-  - TeamObj: {fileID: 4377860346366494433, guid: 00be99b9b360e413ba44c5f40ed29cea, type: 3}
-    TeamUi: {fileID: 6627698175428116254, guid: 37b9f86775dac414ebce9887d3dcff50, type: 3}
-    location: {fileID: 0}
 --- !u!1 &483336691
 GameObject:
   m_ObjectHideFlags: 0
@@ -4068,6 +4057,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allActiveTeams:
   - {fileID: 196842093}
+  - {fileID: 409007082}
   - {fileID: 1770254685}
   diceScript: {fileID: 483336693}
   isLog: 0
@@ -6808,6 +6798,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1808071143}
     m_Modifications:
+    - target: {fileID: 1697848090279557730, guid: e1eab8488090346a5b3141046c315e89, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4207644020784286559, guid: e1eab8488090346a5b3141046c315e89, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.4
@@ -6909,6 +6903,10 @@ PrefabInstance:
     - target: {fileID: 5388029819679387633, guid: a3b40e83b34b2437eb1240fbbfc6cca8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7374604556898132851, guid: a3b40e83b34b2437eb1240fbbfc6cca8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7638036298836474422, guid: a3b40e83b34b2437eb1240fbbfc6cca8, type: 3}
       propertyPath: m_Name
