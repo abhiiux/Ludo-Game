@@ -1,0 +1,4 @@
+repository "2d endless/Ludo_Game@13469754601818@cloud"
+  path "/"
+    br "/main"
+    co "/main"

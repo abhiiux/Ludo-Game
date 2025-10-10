@@ -94,6 +94,7 @@ public class TeamScript : MonoBehaviour
         else if (moveablePawns.Count == 1)
         {
             MovePawn(moveablePawns[0]);
+            // UIManager.Instance.ShowTurns();
         }
         else if (moveablePawns.Count > 1)
         {
@@ -237,6 +238,10 @@ public class TeamScript : MonoBehaviour
             {
                 landedTile.OnPlayerLands(playerScript);
             }
+        }
+        else
+        {
+            UIManager.Instance.ShowTurns();
         }
     }
     #endregion

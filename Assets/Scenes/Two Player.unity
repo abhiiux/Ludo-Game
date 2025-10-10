@@ -348,7 +348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLog: 0
-  tileType: 2
+  tileType: 1
 --- !u!1 &77374194
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,7 +481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLog: 0
-  tileType: 2
+  tileType: 1
 --- !u!1 &106488623
 GameObject:
   m_ObjectHideFlags: 0
@@ -604,7 +604,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLog: 0
-  tileType: 2
+  tileType: 1
 --- !u!4 &128407618 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4952412046735584436, guid: 37b9f86775dac414ebce9887d3dcff50, type: 3}
@@ -655,7 +655,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLog: 0
-  tileType: 2
+  tileType: 1
 --- !u!1 &171397753
 GameObject:
   m_ObjectHideFlags: 0
@@ -876,7 +876,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLog: 0
-  tileType: 2
+  tileType: 1
 --- !u!1001 &196842092
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1036,7 +1036,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLog: 0
-  tileType: 2
+  tileType: 1
 --- !u!1 &274307601
 GameObject:
   m_ObjectHideFlags: 0
@@ -1128,7 +1128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLog: 0
-  tileType: 2
+  tileType: 1
 --- !u!1 &289851624
 GameObject:
   m_ObjectHideFlags: 0
@@ -1598,7 +1598,7 @@ MonoBehaviour:
   turnUI: {fileID: 1808071142}
   rollButton: {fileID: 1232909865}
   waitUI: {fileID: 1695315024}
-  isLog: 0
+  isLog: 1
 --- !u!4 &466059905
 Transform:
   m_ObjectHideFlags: 0
@@ -1803,7 +1803,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   diceAnimation: {fileID: 382860201}
   diceObjects: {fileID: 459908190}
-  isLog: 0
+  isLog: 1
   rollValue: 6
 --- !u!1 &492143226
 GameObject:
@@ -2183,7 +2183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLog: 0
-  tileType: 2
+  tileType: 1
 --- !u!1 &539191088
 GameObject:
   m_ObjectHideFlags: 0
@@ -2321,7 +2321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLog: 0
-  tileType: 2
+  tileType: 1
 --- !u!1 &611977353
 GameObject:
   m_ObjectHideFlags: 0
@@ -2367,7 +2367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLog: 0
-  tileType: 2
+  tileType: 1
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2619,7 +2619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLog: 0
-  tileType: 2
+  tileType: 1
 --- !u!1 &688344237
 GameObject:
   m_ObjectHideFlags: 0
@@ -2815,7 +2815,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLog: 0
-  tileType: 2
+  tileType: 1
 --- !u!1 &764533343
 GameObject:
   m_ObjectHideFlags: 0
@@ -2907,7 +2907,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLog: 0
-  tileType: 2
+  tileType: 1
 --- !u!1 &798035374
 GameObject:
   m_ObjectHideFlags: 0
@@ -2999,7 +2999,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLog: 0
-  tileType: 2
+  tileType: 1
 --- !u!1 &816975776
 GameObject:
   m_ObjectHideFlags: 0
@@ -3220,7 +3220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLog: 0
-  tileType: 2
+  tileType: 1
 --- !u!1 &881993264
 GameObject:
   m_ObjectHideFlags: 0
@@ -4008,7 +4008,7 @@ MonoBehaviour:
   - {fileID: 196842093}
   - {fileID: 1770254685}
   diceScript: {fileID: 483336693}
-  isLog: 0
+  isLog: 1
 --- !u!4 &1150275581
 Transform:
   m_ObjectHideFlags: 0
@@ -4253,7 +4253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLog: 0
-  tileType: 2
+  tileType: 1
 --- !u!1 &1232909865
 GameObject:
   m_ObjectHideFlags: 0
@@ -4432,7 +4432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLog: 0
-  tileType: 2
+  tileType: 1
 --- !u!1 &1278540912
 GameObject:
   m_ObjectHideFlags: 0
@@ -4838,7 +4838,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLog: 0
-  tileType: 2
+  tileType: 1
 --- !u!1 &1466837382
 GameObject:
   m_ObjectHideFlags: 0
@@ -4884,7 +4884,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLog: 0
-  tileType: 2
+  tileType: 1
 --- !u!1 &1482373041
 GameObject:
   m_ObjectHideFlags: 0
@@ -5265,7 +5265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLog: 0
-  tileType: 2
+  tileType: 1
 --- !u!1 &1644573577
 GameObject:
   m_ObjectHideFlags: 0
@@ -5311,7 +5311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLog: 0
-  tileType: 2
+  tileType: 1
 --- !u!1 &1655701480
 GameObject:
   m_ObjectHideFlags: 0
@@ -5357,7 +5357,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLog: 0
-  tileType: 2
+  tileType: 1
 --- !u!1 &1676671552
 GameObject:
   m_ObjectHideFlags: 0
@@ -5902,7 +5902,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLog: 0
-  tileType: 2
+  tileType: 1
 --- !u!1 &1838269706
 GameObject:
   m_ObjectHideFlags: 0
@@ -6025,7 +6025,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLog: 0
-  tileType: 2
+  tileType: 1
 --- !u!1 &1946436276
 GameObject:
   m_ObjectHideFlags: 0
@@ -6373,7 +6373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLog: 0
-  tileType: 2
+  tileType: 1
 --- !u!1 &2092857604
 GameObject:
   m_ObjectHideFlags: 0
@@ -6419,7 +6419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLog: 0
-  tileType: 2
+  tileType: 1
 --- !u!1 &2098251696
 GameObject:
   m_ObjectHideFlags: 0
@@ -6465,7 +6465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLog: 0
-  tileType: 2
+  tileType: 1
 --- !u!1 &2117164598
 GameObject:
   m_ObjectHideFlags: 0
@@ -6690,7 +6690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLog: 0
-  tileType: 2
+  tileType: 1
 --- !u!1001 &2143485302517484428
 PrefabInstance:
   m_ObjectHideFlags: 0
